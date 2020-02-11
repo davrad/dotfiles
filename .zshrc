@@ -53,6 +53,7 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
 ## Alias section 
+alias rm="rm -i"
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
@@ -60,11 +61,10 @@ alias gitu='git add . && git commit && git push'
 alias ls="ls -a --color"
 alias grep="grep -i --color"
 alias cat="bat"
-# & to be able to use the terminal ! for disowning the task
-alias joplin="~/.joplin/joplin.AppImage &!"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias new='urxvt -e zsh $pwd &!'
 
-function open () {
+function open() {
     xdg-open "$*" &!
 }
 
@@ -206,5 +206,3 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
   		ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
     ;;
 esac
-
-neofetch --ascii ~/Pictures/logo.txt --ascii_color 3
