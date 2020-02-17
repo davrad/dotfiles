@@ -26,6 +26,7 @@ set ruler
 set undolevels=1000	
 set backspace=indent,eol,start
 
+"vim-plug as plugin manager
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree' "File Tree
 Plug 'itchyny/lightline.vim' "Statusline
