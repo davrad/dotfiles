@@ -29,7 +29,7 @@ font xft:Inconsolata 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal 
+bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Return exec urxvt
 
 # kill focused window
